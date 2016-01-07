@@ -1,0 +1,11 @@
+<ion-view view-title="mediba Creator × Engineer blog">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item item-body" ng-repeat="entry in rss" href="{{entry.link}}" target="_blank">
+        <h2>{{entry.title}}</h2>
+        <p>{{entry.description | removeHtmlTag | limitTo:64}}</p>
+        <address>{{entry.pubDate}} {{entry.author}}</address>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
