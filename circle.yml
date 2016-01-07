@@ -1,3 +1,19 @@
 machine:
   node:
     version: 5.4.0
+
+dependencies:
+  override:
+    - npm install -g bower
+    - npm install -g cordova
+    - npm install -g ionic
+    - npm install
+    - bower install
+    - ionic state reset
+    - ionic resources
+
+test:
+  override:
+    - npm test
+    - ionic build android
+
