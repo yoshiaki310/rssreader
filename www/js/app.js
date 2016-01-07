@@ -1,4 +1,9 @@
-angular.module('rssreader', ['ionic', 'rssreader.controllers'])
+angular.module('rssreader', [
+  'ionic',
+  'ngCordova',
+  'ngResource',
+  'rssreader.controllers',
+])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
